@@ -1,0 +1,55 @@
+.container {
+    width: 370px;
+    padding: 25px;
+    border: 2px solid;
+}
+
+#ecran {
+    border: 2px solid #008CBA;
+    width: 320px;
+    text-align: end;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: white;
+    border: 2px solid #008CBA;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 80px;
+}
+
+.button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.sterge {
+    padding: 16px;
+    background-color: rgb(240, 240, 240);
+}
+
+.sterge:hover {
+    background-color: red;
+    border: 2px solid black;
+}
+
+.rezultat:hover {
+    background-color: rgb(0, 255, 21);
+    border: 2px solid black;
+}
+
+.operator {
+    background-color: rgb(240, 240, 240);
+}

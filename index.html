@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>calculatoru lu Delia</title>
+</head>
+
+<body>
+    <div class="container">
+        <input id="ecran" type="text" value="0" placeholder="100">
+        <div class="corp">
+            <table>
+                <tr>
+                    <td>
+                        <button type="button" class="button" onclick="buton(1)">1</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button" onclick="buton(2)">2</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button" onclick="buton(3)">3</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button operator" onclick="calcul('+')">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="button" onclick="buton(4)">4</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button" onclick="buton(5)">5</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button" onclick="buton(6)">6</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button operator" onclick="calcul('-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="button" onclick="buton(7)">7</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button" onclick="buton(8)">8</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button" onclick="buton(9)">9</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button operator" onclick="calcul('*')">*</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="button sterge" onclick="sterge()">sterge</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button" onclick="buton(0)">0</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button rezultat operator" onclick="rezultat()">=</button>
+                    </td>
+                    <td>
+                        <button type="button" class="button operator" onclick="calcul('/')">/</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        var x;
+        var v = 0; //sa ramana valoarea pe ecran dupa primu numar
+        var operator;
+
+        function buton(a) {
+
+            if ( v == 1 ) {
+                    document.getElementById("ecran").value = 0;
+                    v = 0;
+                }
+            document.getElementById("ecran").value = 10 * (document.getElementById("ecran").value) + a;
+
+        }
+
+        function calcul(o){
+
+            operator = o;
+            x = parseInt(document.getElementById('ecran').value);
+            v = 1;
+
+        }
+
+        function rezultat() {
+            
+            y = parseInt(document.getElementById('ecran').value);
+            
+            switch (operator) {
+                case "+":
+                    document.getElementById('ecran').value = x+y;
+                    break;
+                case "-":
+                    document.getElementById('ecran').value = x-y;
+                    break;
+                case "*":
+                    document.getElementById('ecran').value = x*y;
+                    break;
+                case "/":
+                    document.getElementById('ecran').value = x/y;
+                    break;
+            }
+
+            v = 1;
+
+        }
+
+        function sterge() {
+            document.getElementById("ecran").value = 0;
+            x = 0;
+        }
+    </script>
+</body>
+
+</html>
